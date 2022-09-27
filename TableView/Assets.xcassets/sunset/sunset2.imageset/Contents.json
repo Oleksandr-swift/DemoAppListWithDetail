@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "1643508218_6-abrakadabra-fun-p-estetika-zakata-v-gorode-11.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
