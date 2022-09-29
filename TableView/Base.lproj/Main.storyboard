@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-hA-stJ" userLabel="Table" customClass="Custom">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="Dsj-Gx-1G2" customClass="CustomTableViewCell" customModule="TableView" customModuleProvider="target">
@@ -58,6 +58,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bug-wj-nfg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Sunset List" id="uqB-yc-V68"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,11 +71,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bfU-hA-stJ" secondAttribute="trailing" id="9sc-mV-CJW"/>
                             <constraint firstItem="bfU-hA-stJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BKC-pB-0e3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bfU-hA-stJ" secondAttribute="bottom" id="EIC-HK-ffB"/>
-                            <constraint firstItem="bfU-hA-stJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nzq-pp-Tzp"/>
+                            <constraint firstItem="bug-wj-nfg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YI4-su-X6M"/>
+                            <constraint firstItem="bfU-hA-stJ" firstAttribute="top" secondItem="bug-wj-nfg" secondAttribute="bottom" id="bxE-U3-D2J"/>
+                            <constraint firstItem="bug-wj-nfg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dNF-dD-w6b"/>
+                            <constraint firstItem="bug-wj-nfg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tgv-oh-3Sx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="informationTableView" destination="bfU-hA-stJ" id="KQr-hE-Vk1"/>
+                        <outlet property="navigationBar" destination="bug-wj-nfg" id="LVn-gG-PsJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

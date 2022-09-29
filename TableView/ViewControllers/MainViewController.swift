@@ -7,14 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var informationTableView: UITableView!
-    
-    struct Sunset {
-        let title: String
-        let imageName: String
-    }
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     let data: [Sunset] = [
         Sunset(title: "Morning Run", imageName: "sunset1"),
@@ -28,6 +24,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         informationTableView.dataSource = self
         informationTableView.delegate = self
+        navigationBar.items?.first?.title = "Sunset list"
+        navigationBar.backgroundColor = .red
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,9 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sunset = data[indexPath.row]
         let cell = informationTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        cell.label.text = sunset.title
-        cell.iconImageView.image = UIImage(named: sunset.imageName)
-        cell.iconImageView.layer.cornerRadius = 30
+        cell.setupUI(data: sunset)
         return cell
     }
     
