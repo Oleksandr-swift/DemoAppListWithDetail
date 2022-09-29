@@ -39,6 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = Table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         cell.label.text = sunset.title
         cell.iconImageView.image = UIImage(named: sunset.imageName)
+        cell.iconImageView.layer.cornerRadius = 30
         return cell
     }
     
