@@ -98,14 +98,24 @@
                                 <rect key="frame" x="16" y="44" width="382" height="335"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9X-ow-mse">
-                                <rect key="frame" x="16" y="438" width="382" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="89p-Hi-2nY"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="409" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYt-zL-dxc">
+                                <rect key="frame" x="184" y="674" width="119" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-ty-bnX">
+                                <rect key="frame" x="184" y="674" width="119" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="jtK-b1-bLL" eventType="touchUpInside" id="7JH-NJ-7Gb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Yl-Oi-jcz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -115,18 +125,18 @@
                             <constraint firstItem="0Yl-Oi-jcz" firstAttribute="trailing" secondItem="S1U-qV-AIi" secondAttribute="trailing" constant="16" id="J7V-Jy-brU"/>
                             <constraint firstItem="0Yl-Oi-jcz" firstAttribute="bottom" secondItem="S1U-qV-AIi" secondAttribute="bottom" constant="483" id="JxX-Ap-r5z"/>
                             <constraint firstItem="0Yl-Oi-jcz" firstAttribute="trailing" secondItem="p9X-ow-mse" secondAttribute="trailing" constant="16" id="eZi-8v-GNl"/>
-                            <constraint firstItem="p9X-ow-mse" firstAttribute="top" secondItem="nzn-bF-L3A" secondAttribute="topMargin" constant="394" id="ekW-1A-EcO"/>
                             <constraint firstItem="S1U-qV-AIi" firstAttribute="leading" secondItem="0Yl-Oi-jcz" secondAttribute="leading" constant="16" id="hIB-in-VQq"/>
+                            <constraint firstItem="p9X-ow-mse" firstAttribute="top" secondItem="S1U-qV-AIi" secondAttribute="bottom" constant="30" id="xRK-zF-zLh"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="detailImageView" destination="S1U-qV-AIi" id="Yne-Qk-kZ8"/>
+                        <outlet property="detailImageView" destination="S1U-qV-AIi" id="GKx-iD-RXy"/>
                         <outlet property="fullDescriptionLabel" destination="p9X-ow-mse" id="fWg-Z3-6vC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCX-eb-N9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="76"/>
+            <point key="canvasLocation" x="763.768115942029" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>

@@ -22,10 +22,22 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupVC()
+    }
+    
+    private func setupVC() {
         informationTableView.dataSource = self
         informationTableView.delegate = self
         navigationBar.items?.first?.title = "Sunset list"
         navigationBar.backgroundColor = .red
+    }
+   
+    private func navigateToDetailScreen(sunset: Sunset) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(identifier: "Detail") as DetailScreenViewController
+        vc.sunset = sunset
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,12 +52,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(data[indexPath.row].title)
+        let sunset = self.data[indexPath.row]
+        self.navigateToDetailScreen(sunset: sunset)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-    
 }
 
