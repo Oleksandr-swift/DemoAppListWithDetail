@@ -15,6 +15,7 @@
 		1CADC62728D8EA5E00C336DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CADC62628D8EA5E00C336DD /* Assets.xcassets */; };
 		1CADC62A28D8EA5E00C336DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CADC62828D8EA5E00C336DD /* LaunchScreen.storyboard */; };
 		1CADC63228D8F1B800C336DD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CADC63128D8F1B800C336DD /* CustomTableViewCell.swift */; };
+		1CE6844728E6F0F000B58386 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6844628E6F0F000B58386 /* DetailScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1CADC62928D8EA5E00C336DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CADC62B28D8EA5E00C336DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CADC63128D8F1B800C336DD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		1CE6844628E6F0F000B58386 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				1CADC62128D8EA5D00C336DD /* MainViewController.swift */,
+				1CE6844628E6F0F000B58386 /* DetailScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE6844728E6F0F000B58386 /* DetailScreenViewController.swift in Sources */,
 				1CADC62228D8EA5D00C336DD /* MainViewController.swift in Sources */,
 				1C71578E28E636D100380BD0 /* Sunset.swift in Sources */,
 				1CADC61E28D8EA5D00C336DD /* AppDelegate.swift in Sources */,

@@ -86,6 +86,48 @@
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="75.669642857142847"/>
         </scene>
+        <!--Detail Screen View Controller-->
+        <scene sceneID="GqH-xQ-c1M">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="jtK-b1-bLL" customClass="DetailScreenViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nzn-bF-L3A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S1U-qV-AIi">
+                                <rect key="frame" x="16" y="44" width="382" height="335"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9X-ow-mse">
+                                <rect key="frame" x="16" y="438" width="382" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="89p-Hi-2nY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Yl-Oi-jcz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p9X-ow-mse" firstAttribute="leading" secondItem="0Yl-Oi-jcz" secondAttribute="leading" constant="16" id="EDl-fM-iJL"/>
+                            <constraint firstItem="S1U-qV-AIi" firstAttribute="top" secondItem="0Yl-Oi-jcz" secondAttribute="top" id="J2W-M3-6BP"/>
+                            <constraint firstItem="0Yl-Oi-jcz" firstAttribute="trailing" secondItem="S1U-qV-AIi" secondAttribute="trailing" constant="16" id="J7V-Jy-brU"/>
+                            <constraint firstItem="0Yl-Oi-jcz" firstAttribute="bottom" secondItem="S1U-qV-AIi" secondAttribute="bottom" constant="483" id="JxX-Ap-r5z"/>
+                            <constraint firstItem="0Yl-Oi-jcz" firstAttribute="trailing" secondItem="p9X-ow-mse" secondAttribute="trailing" constant="16" id="eZi-8v-GNl"/>
+                            <constraint firstItem="p9X-ow-mse" firstAttribute="top" secondItem="nzn-bF-L3A" secondAttribute="topMargin" constant="394" id="ekW-1A-EcO"/>
+                            <constraint firstItem="S1U-qV-AIi" firstAttribute="leading" secondItem="0Yl-Oi-jcz" secondAttribute="leading" constant="16" id="hIB-in-VQq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="S1U-qV-AIi" id="Yne-Qk-kZ8"/>
+                        <outlet property="fullDescriptionLabel" destination="p9X-ow-mse" id="fWg-Z3-6vC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCX-eb-N9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="76"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
