@@ -13,11 +13,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var navigationBar: UINavigationBar!
     
     let data: [Sunset] = [
-        Sunset(title: "Morning Run", imageName: "sunset1"),
-        Sunset(title: "Evening Sunset", imageName: "sunset2"),
-        Sunset(title: "Vacation Photos", imageName: "sunset3"),
-        Sunset(title: "Visiting Frieends", imageName: "sunset4"),
-        Sunset(title: "Some Other Title", imageName: "sunset5"),
+        Sunset(title: "Morning Run", imageName: "sunset1", country: "Italy"),
+        Sunset(title: "Evening Sunset", imageName: "sunset2", country: "Ukraine"),
+        Sunset(title: "Vacation Photos", imageName: "sunset3", country: "Poland"),
+        Sunset(title: "Visiting Frieends", imageName: "sunset4", country: "Czech Republic"),
+        Sunset(title: "Some Other Title", imageName: "sunset5", country: "Сroatia"),
     ]
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         informationTableView.dataSource = self
         informationTableView.delegate = self
         navigationBar.items?.first?.title = "Sunset list"
-        navigationBar.backgroundColor = .red
+        navigationBar.backgroundColor = UIColor.red
     }
    
     private func navigateToDetailScreen(sunset: Sunset) {
@@ -60,4 +60,4 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 140
     }
 }
-
+    

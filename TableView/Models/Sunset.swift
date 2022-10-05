@@ -10,4 +10,5 @@ import Foundation
 struct Sunset {
     let title: String
     let imageName: String
+    let country: String
 }
