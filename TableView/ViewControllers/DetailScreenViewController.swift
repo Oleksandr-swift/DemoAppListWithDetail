@@ -17,7 +17,7 @@ class DetailScreenViewController: UIViewController {
     @IBOutlet var answersButtons: [UIButton]!
     
     var sunset: Sunset?
-    let country: [String] = ["Italy",
+    let countries: [String] = ["Italy",
                              "Ukraine",
                              "Poland",
                              "Czech Republic",
@@ -69,7 +69,8 @@ class DetailScreenViewController: UIViewController {
     }
     
     @IBAction func didTapAnswerButton(_ sender: UIButton) {
-        
+        sender.titleLabel?.text
+        print(  sender.titleLabel?.text)
     }
     
     // MARK: - SetupUI
@@ -77,5 +78,20 @@ class DetailScreenViewController: UIViewController {
     func setupData(sunset: Sunset) {
         detailImageView.image = UIImage(named: sunset.imageName)
         fullDescriptionLabel.text = sunset.title
+        setupAnswers(country: sunset.country)
     }
+    
+    func setupAnswers(country: String) {
+        let firstWrongAnswer = countries.filter { $0 != country }.randomElement()
+        let secondWrongAnswer = countries.filter { $0 != firstWrongAnswer && $0 != country }.randomElement()
+        let shufledArray = [country, firstWrongAnswer, secondWrongAnswer].shuffled()
+        var index = 0
+        for button in answersButtons {
+            button.setTitle(shufledArray[index], for: .normal)
+            index += 1
+        }
+    }
+    
+    
 }
+
