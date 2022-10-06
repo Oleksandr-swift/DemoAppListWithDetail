@@ -18,20 +18,20 @@ class DetailScreenViewController: UIViewController {
     
     var sunset: Sunset?
     let countries: [String] = ["Italy",
-                             "Ukraine",
-                             "Poland",
-                             "Czech Republic",
-                             "Сroatia",
-                             "Sweden",
-                             "France",
-                             "Spain",
-                             "USA",
-                             "Cannada",
-                             "Great Britain",
-                             "Belgium",
-                             "Moldova",
-                             "Turkey",
-                             "Egypt"
+                               "Ukraine",
+                               "Poland",
+                               "Czech Republic",
+                               "Сroatia",
+                               "Sweden",
+                               "France",
+                               "Spain",
+                               "USA",
+                               "Cannada",
+                               "Great Britain",
+                               "Belgium",
+                               "Moldova",
+                               "Turkey",
+                               "Egypt"
     ]
     
     override func viewDidLoad() {
@@ -69,8 +69,18 @@ class DetailScreenViewController: UIViewController {
     }
     
     @IBAction func didTapAnswerButton(_ sender: UIButton) {
-        sender.titleLabel?.text
-        print(  sender.titleLabel?.text)
+        if let country = sunset?.country {
+            if sender.titleLabel?.text == country {
+                sender.backgroundColor = .green
+            } else {
+                sender.backgroundColor = .red
+                for button in answersButtons {
+                    if button.titleLabel?.text == country {
+                        button.backgroundColor = .green
+                    }
+                }
+            }
+        }
     }
     
     // MARK: - SetupUI
@@ -91,7 +101,6 @@ class DetailScreenViewController: UIViewController {
             index += 1
         }
     }
-    
     
 }
 
