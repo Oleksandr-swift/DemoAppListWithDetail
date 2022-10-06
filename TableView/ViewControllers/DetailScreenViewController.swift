@@ -15,6 +15,7 @@ class DetailScreenViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answersStackView: UIStackView!
     @IBOutlet var answersButtons: [UIButton]!
+    @IBOutlet weak var navigationBarView: UIView!
     
     var sunset: Sunset?
     let countries: [String] = ["Italy",
@@ -50,12 +51,13 @@ class DetailScreenViewController: UIViewController {
         titleLabel.text = "Sunset"
         titleLabel.font = UIFont(name: "System", size: 20)
         titleLabel.textColor = .black
-        titleLabel.backgroundColor = UIColor.red
+       // titleLabel.backgroundColor = UIColor.red
         detailImageView.layer.cornerRadius = 15
         detailImageView.contentMode = .scaleToFill
         questionLabel.text = "Where was this great photo taken?"
         questionLabel.textColor = .red
         questionLabel.numberOfLines = 2
+        navigationBarView.backgroundColor = .lightGray
         for button in answersButtons {
             button.backgroundColor = .white
             button.layer.borderWidth = 2
@@ -80,6 +82,9 @@ class DetailScreenViewController: UIViewController {
                     }
                 }
             }
+//            for button in answersButtons {
+//                button.isEnabled = false
+//            }
         }
     }
     

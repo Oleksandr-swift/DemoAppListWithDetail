@@ -10,7 +10,8 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var informationTableView: UITableView!
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var navigationBarView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     let data: [Sunset] = [
         Sunset(title: "Morning Run", imageName: "sunset1", country: "Italy"),
@@ -28,8 +29,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private func setupVC() {
         informationTableView.dataSource = self
         informationTableView.delegate = self
-        navigationBar.items?.first?.title = "Sunset list"
-        navigationBar.backgroundColor = UIColor.red
+        titleLabel.text = "Sunset list"
+        navigationBarView.backgroundColor = UIColor.lightGray
     }
    
     private func navigateToDetailScreen(sunset: Sunset) {

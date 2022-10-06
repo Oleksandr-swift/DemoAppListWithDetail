@@ -17,8 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhO-Ze-QgX" userLabel="Navigation bar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLx-1U-elj">
+                                        <rect key="frame" x="186.5" y="15" width="41.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aLx-1U-elj" secondAttribute="bottom" constant="15" id="2cr-VJ-lH0"/>
+                                    <constraint firstItem="aLx-1U-elj" firstAttribute="centerX" secondItem="GhO-Ze-QgX" secondAttribute="centerX" id="BkE-ER-aQX"/>
+                                    <constraint firstAttribute="height" constant="51" id="LKG-3B-3yD"/>
+                                    <constraint firstItem="aLx-1U-elj" firstAttribute="top" secondItem="GhO-Ze-QgX" secondAttribute="top" constant="15" id="hZd-Hk-Wcm"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfU-hA-stJ" userLabel="Table" customClass="Custom">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="135" width="414" height="761"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="Dsj-Gx-1G2" customClass="CustomTableViewCell" customModule="TableView" customModuleProvider="target">
@@ -59,29 +77,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bug-wj-nfg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" red="0.82352941176470584" green="0.10980392156862745" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem title="Sunset List" id="uqB-yc-V68"/>
-                                </items>
-                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="zpF-US-V6y">
+                                <rect key="frame" x="0.0" y="103" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bfU-hA-stJ" secondAttribute="trailing" id="9sc-mV-CJW"/>
-                            <constraint firstItem="bfU-hA-stJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BKC-pB-0e3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bfU-hA-stJ" secondAttribute="bottom" id="EIC-HK-ffB"/>
-                            <constraint firstItem="bug-wj-nfg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YI4-su-X6M"/>
-                            <constraint firstItem="bfU-hA-stJ" firstAttribute="top" secondItem="bug-wj-nfg" secondAttribute="bottom" id="bxE-U3-D2J"/>
-                            <constraint firstItem="bug-wj-nfg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dNF-dD-w6b"/>
-                            <constraint firstItem="bug-wj-nfg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tgv-oh-3Sx"/>
+                            <constraint firstItem="GhO-Ze-QgX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Xu-BP-Myn"/>
+                            <constraint firstItem="bfU-hA-stJ" firstAttribute="trailing" secondItem="GhO-Ze-QgX" secondAttribute="trailing" id="1nV-b2-feC"/>
+                            <constraint firstItem="bfU-hA-stJ" firstAttribute="leading" secondItem="GhO-Ze-QgX" secondAttribute="leading" id="DCL-AE-jwn"/>
+                            <constraint firstItem="zpF-US-V6y" firstAttribute="top" secondItem="GhO-Ze-QgX" secondAttribute="bottom" id="E9k-FG-GPu"/>
+                            <constraint firstItem="GhO-Ze-QgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bj3-9c-4Xq"/>
+                            <constraint firstItem="bfU-hA-stJ" firstAttribute="top" secondItem="zpF-US-V6y" secondAttribute="bottom" constant="10" id="iyp-7Z-JIS"/>
+                            <constraint firstItem="GhO-Ze-QgX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rTR-u0-ArV"/>
+                            <constraint firstAttribute="bottom" secondItem="bfU-hA-stJ" secondAttribute="bottom" id="sgt-Sw-Ey2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="informationTableView" destination="bfU-hA-stJ" id="KQr-hE-Vk1"/>
-                        <outlet property="navigationBar" destination="bug-wj-nfg" id="LVn-gG-PsJ"/>
+                        <outlet property="navigationBarView" destination="GhO-Ze-QgX" id="tIl-Ft-bSe"/>
+                        <outlet property="titleLabel" destination="aLx-1U-elj" id="HHg-vR-ioC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,7 +179,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-Co-eYh">
                                                 <rect key="frame" x="20" y="125" width="314" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebL-r7-pDg">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ebL-r7-pDg">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="80"/>
                                                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
@@ -166,7 +187,7 @@
                                                             <action selector="didTapAnswerButton:" destination="jtK-b1-bLL" eventType="touchUpInside" id="9cd-Z6-Fzd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-o3-Hwy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="D5z-o3-Hwy">
                                                         <rect key="frame" x="108" y="0.0" width="98" height="80"/>
                                                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
@@ -174,7 +195,7 @@
                                                             <action selector="didTapAnswerButton:" destination="jtK-b1-bLL" eventType="touchUpInside" id="48m-4F-qhH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae5-FL-WbC">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ae5-FL-WbC">
                                                         <rect key="frame" x="216" y="0.0" width="98" height="80"/>
                                                         <color key="backgroundColor" red="0.80784313730000001" green="0.1647058824" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="Button"/>
@@ -232,6 +253,7 @@
                         <outlet property="answersStackView" destination="WNb-Co-eYh" id="Zxd-a4-mQc"/>
                         <outlet property="detailImageView" destination="S1U-qV-AIi" id="GKx-iD-RXy"/>
                         <outlet property="fullDescriptionLabel" destination="p9X-ow-mse" id="fWg-Z3-6vC"/>
+                        <outlet property="navigationBarView" destination="kic-rc-8Xl" id="Fp9-Q7-eDy"/>
                         <outlet property="questionLabel" destination="ijO-9I-yPM" id="cjb-Na-kK9"/>
                         <outlet property="titleLabel" destination="mYd-c3-gQf" id="gpM-sh-OS5"/>
                         <outletCollection property="answersButtons" destination="ebL-r7-pDg" collectionClass="NSMutableArray" id="cqd-Rg-bhb"/>
