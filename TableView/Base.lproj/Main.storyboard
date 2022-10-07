@@ -84,6 +84,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="oH2-e8-CCL"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -100,6 +103,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="controlSegment" destination="zpF-US-V6y" id="lED-h6-9eV"/>
                         <outlet property="informationTableView" destination="bfU-hA-stJ" id="KQr-hE-Vk1"/>
                         <outlet property="navigationBarView" destination="GhO-Ze-QgX" id="tIl-Ft-bSe"/>
                         <outlet property="titleLabel" destination="aLx-1U-elj" id="HHg-vR-ioC"/>
