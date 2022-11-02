@@ -149,6 +149,7 @@
                                     <constraint firstAttribute="bottom" secondItem="mYd-c3-gQf" secondAttribute="bottom" constant="15" id="TL3-Xs-mWs"/>
                                     <constraint firstItem="mYd-c3-gQf" firstAttribute="top" secondItem="kic-rc-8Xl" secondAttribute="top" constant="15" id="TpP-He-bYh"/>
                                     <constraint firstItem="iWA-ty-bnX" firstAttribute="leading" secondItem="kic-rc-8Xl" secondAttribute="leading" constant="15" id="c5f-NU-cst"/>
+                                    <constraint firstItem="mYd-c3-gQf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iWA-ty-bnX" secondAttribute="trailing" constant="8" symbolic="YES" id="dZ0-5G-Hnp"/>
                                     <constraint firstAttribute="bottom" secondItem="iWA-ty-bnX" secondAttribute="bottom" constant="15" id="oBo-Al-Gtg"/>
                                     <constraint firstItem="mYd-c3-gQf" firstAttribute="centerX" secondItem="kic-rc-8Xl" secondAttribute="centerX" id="vYu-Hk-JB7"/>
                                 </constraints>
@@ -163,7 +164,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9X-ow-mse">
-                                        <rect key="frame" x="50" y="395" width="314" height="20.5"/>
+                                        <rect key="frame" x="186.5" y="395" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -231,13 +232,15 @@
                                     <constraint firstItem="lD8-Qx-hnp" firstAttribute="leading" secondItem="FGU-SC-rxd" secondAttribute="leading" constant="30" id="47Z-gC-VC2"/>
                                     <constraint firstItem="S1U-qV-AIi" firstAttribute="top" secondItem="FGU-SC-rxd" secondAttribute="top" constant="30" id="Uux-Hd-0f1"/>
                                     <constraint firstAttribute="trailing" secondItem="S1U-qV-AIi" secondAttribute="trailing" constant="20" id="ZuI-ex-irI"/>
-                                    <constraint firstAttribute="trailing" secondItem="p9X-ow-mse" secondAttribute="trailing" constant="50" id="hta-1f-qR2"/>
+                                    <constraint firstItem="p9X-ow-mse" firstAttribute="centerX" secondItem="FGU-SC-rxd" secondAttribute="centerX" id="aID-6q-b5i"/>
                                     <constraint firstAttribute="trailing" secondItem="lD8-Qx-hnp" secondAttribute="trailing" constant="30" id="keL-HX-Qqx"/>
                                     <constraint firstItem="S1U-qV-AIi" firstAttribute="centerX" secondItem="FGU-SC-rxd" secondAttribute="centerX" id="oUT-li-5h7"/>
                                     <constraint firstAttribute="bottom" secondItem="lD8-Qx-hnp" secondAttribute="bottom" constant="30" id="pcz-Ki-6pd"/>
                                     <constraint firstItem="p9X-ow-mse" firstAttribute="top" secondItem="S1U-qV-AIi" secondAttribute="bottom" constant="30" id="uSK-ES-7TJ"/>
-                                    <constraint firstItem="p9X-ow-mse" firstAttribute="leading" secondItem="FGU-SC-rxd" secondAttribute="leading" constant="50" id="xf4-AO-fW7"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="jtK-b1-bLL" id="Sih-zf-6zm"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Yl-Oi-jcz"/>
@@ -259,6 +262,7 @@
                         <outlet property="fullDescriptionLabel" destination="p9X-ow-mse" id="fWg-Z3-6vC"/>
                         <outlet property="navigationBarView" destination="kic-rc-8Xl" id="Fp9-Q7-eDy"/>
                         <outlet property="questionLabel" destination="ijO-9I-yPM" id="cjb-Na-kK9"/>
+                        <outlet property="scrollView" destination="FGU-SC-rxd" id="AbI-Xv-4Ej"/>
                         <outlet property="titleLabel" destination="mYd-c3-gQf" id="gpM-sh-OS5"/>
                         <outletCollection property="answersButtons" destination="ebL-r7-pDg" collectionClass="NSMutableArray" id="cqd-Rg-bhb"/>
                         <outletCollection property="answersButtons" destination="D5z-o3-Hwy" collectionClass="NSMutableArray" id="TXV-Qv-PFC"/>

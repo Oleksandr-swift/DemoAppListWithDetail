@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailScreenViewController: UIViewController {
+class DetailScreenViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var fullDescriptionLabel: UILabel!
@@ -16,6 +16,7 @@ class DetailScreenViewController: UIViewController {
     @IBOutlet weak var answersStackView: UIStackView!
     @IBOutlet var answersButtons: [UIButton]!
     @IBOutlet weak var navigationBarView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var sunset: Sunset?
     let countries: [String] = ["Italy",
@@ -58,6 +59,8 @@ class DetailScreenViewController: UIViewController {
         questionLabel.textColor = .red
         questionLabel.numberOfLines = 2
         navigationBarView.backgroundColor = .lightGray
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 6.0
         for button in answersButtons {
             button.backgroundColor = .white
             button.layer.borderWidth = 2
@@ -89,6 +92,9 @@ class DetailScreenViewController: UIViewController {
     }
     
     // MARK: - SetupUI
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+           return detailImageView
+       }
     
     func setupData(sunset: Sunset) {
         detailImageView.image = UIImage(named: sunset.imageName)
